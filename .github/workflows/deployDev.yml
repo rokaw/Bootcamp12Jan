@@ -18,11 +18,11 @@ jobs:
 
 # deploy ARM template with inline AZ CLI command
         - name: Deploy ARM Template
+          uses: azure/CLI@v1
       # define required arguments for AZ CLI command 
           env:
             RESOURCE_GROUP: DevOpsBootCamp
-            TEMPLATEFILE: container-webapp-template.json               
-           uses: azure/CLI@v1
+            TEMPLATEFILE: container-webapp-template.json 
            with:
       # Execute AZ CLI command
                 inlineScript: |
