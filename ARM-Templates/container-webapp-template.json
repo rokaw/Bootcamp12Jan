@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "app5587devops-dev",
+            "defaultValue": "app5587devops-test",
             "type": "String"
         },
         "hostingPlanName": {
