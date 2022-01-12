@@ -1,5 +1,6 @@
 on: [push]
-
+paths:
+   - ".github/workflows/deployDev.yml
 name: AzureLogintest
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
       # define required arguments for AZ CLI command 
         env:
           RESOURCE_GROUP: DevOpsBootCamp
-          TEMPLATEFILE: ARM-Templates/container-webapp-template.json               
+          TEMPLATEFILE: container-webapp-template.json               
         uses: azure/CLI@v1
         with:
       # Execute AZ CLI command
