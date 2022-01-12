@@ -22,8 +22,8 @@ jobs:
           env:
             RESOURCE_GROUP: DevOpsBootCamp
             TEMPLATEFILE: container-webapp-template.json               
-            uses: azure/CLI@v1
-            with:
+           uses: azure/CLI@v1
+           with:
       # Execute AZ CLI command
-            inlineScript: |
-                az deployment group create --resource-group $RESOURCE_GROUP --template-file $TEMPLATEFILE
+                inlineScript: |
+                    az deployment group create --resource-group $RESOURCE_GROUP --template-file $TEMPLATEFILE
