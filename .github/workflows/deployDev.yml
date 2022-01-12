@@ -1,6 +1,13 @@
-on: [push]
+name: GitHub Actions Demo
 
-name: AzureLoginSample
+on: 
+  push:
+    paths:
+      include:
+      - deploydev.yml
+permissions:
+id-token: write
+contents: read
 
 jobs:
   build-and-deploy:
