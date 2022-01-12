@@ -2,11 +2,10 @@ name: .NET
 
 on:
   push:
-    paths:
-      - "/Application"
-  
+    paths: 'Application/**'
     branches: [ main ]
   pull_request:
+    paths: 'Application/**'
     branches: [ main ]
 
 jobs:
@@ -25,4 +24,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
     - name: Test
-      run: dotnet test Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
