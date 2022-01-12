@@ -8,9 +8,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Log in with Azure
-        uses: azure/login@v1
-        with:
+     - name: Checkout tools repo 
+       uses: actions/checkout@v2
+     - name: Log in with          
+       uses: azure/login@v1
+       with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
 # deploy ARM template with inline AZ CLI command
