@@ -17,13 +17,8 @@ jobs:
             creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
 # deploy ARM template with inline AZ CLI command
-        - name: Deploy ARM Template
-          uses: azure/CLI@v1
-      # define required arguments for AZ CLI command 
-          env:
-            RESOURCE_GROUP: DevOpsBootCamp
-            TEMPLATEFILE: container-webapp-template.json 
-           with:
-      # Execute AZ CLI command
-                inlineScript: |
-                    az deployment group create --resource-group $RESOURCE_GROUP --template-file $TEMPLATEFILE
+        - name: Run ARM deploy Dev
+          uses: azure/arm-deploy@v1
+          with:
+            resourceGroupName: DevOpsBootCamp
+            template: ARM-Templates/container-webapp-template.json
