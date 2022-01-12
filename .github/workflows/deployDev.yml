@@ -1,9 +1,5 @@
 name: GitHub Actions Demo
-on: 
-  push:
-    paths:
-      include:
-      - deploydev.yml
+on:[push]
 permissions:
 id-token: write
 contents: read
