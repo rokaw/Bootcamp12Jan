@@ -1,6 +1,6 @@
 on: [push]
 paths:
-   - ".github/workflows/deployDev.yml
+   - ".github/workflows/deployDev.yml"
 name: AzureLogintest
 
 jobs:
