@@ -1,8 +1,6 @@
-name: GitHub Actions Demo
 on: [push]
-permissions:
-id-token: write
-contents: read
+
+name: AzureLogin
 
 jobs:
   build-and-deploy:
