@@ -1,8 +1,8 @@
+name: AzureLogintest
 on: 
    push:
-   paths:
-   - ".github/workflows/deployDev.yml"
-name: AzureLogintest
+        paths:
+            - ".github/workflows/deployDev.yml"
 
 jobs:
   build-and-deploy:
